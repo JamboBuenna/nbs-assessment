@@ -3,7 +3,7 @@ const express = require('express')
 const router = express.Router()
 
 router.get('/', (req, res, next) => {
-    res.send('You have hit GET /posts endpoint')
+    res.send('REST service working normally')
 })
 
 module.exports = router
