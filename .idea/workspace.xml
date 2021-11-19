@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8bcee0d2-5601-4165-8b74-d6dd8ae1d97d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/routes/health.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/health.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.husky/pre-commit" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +102,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1637343490511</updated>
-      <workItem from="1637343492300" duration="3611000" />
+      <workItem from="1637343492300" duration="4029000" />
     </task>
     <task id="LOCAL-00001" summary="Roll up a hello world application with Mocha ready to look at the assignment.">
       <created>1637343587258</created>
@@ -123,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637350839924</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Test prettier hooks">
+      <created>1637350885800</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1637350885800</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +142,8 @@
     <MESSAGE value="Roll up a hello world application with Mocha ready to look at the assignment." />
     <MESSAGE value="Take in the json example" />
     <MESSAGE value="Prettier &amp; EsLint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prettier &amp; EsLint" />
+    <MESSAGE value="Test prettier hooks" />
+    <MESSAGE value="Test prettier hooks - 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test prettier hooks - 2" />
   </component>
 </project>
