@@ -1,0 +1,10 @@
+{
+  "diff": true,
+  "recursive": true,
+  "extension": ["js"],
+  "package": "./package.json",
+  "slow": 75,
+  "timeout": 7000,
+  "color": true,
+  "exit": true
+}
