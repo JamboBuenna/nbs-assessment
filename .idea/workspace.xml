@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8bcee0d2-5601-4165-8b74-d6dd8ae1d97d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/items.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/json.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/health.spec.js" afterDir="false" />
+    <list default="true" id="8bcee0d2-5601-4165-8b74-d6dd8ae1d97d" name="Changes" comment="Prettier &amp; EsLint">
+      <change afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/health.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/posts.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/json.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/health.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/health.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/json.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/json.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +24,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="219BaP7knNr7nC3ssEShgv0fX4f" />
   <component name="ProjectViewState">
@@ -39,6 +51,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="C:\sources\nbs-assessment\node_modules\prettier" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -97,7 +110,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1637343490511</updated>
-      <workItem from="1637343492300" duration="2839000" />
+      <workItem from="1637343492300" duration="3590000" />
     </task>
     <task id="LOCAL-00001" summary="Roll up a hello world application with Mocha ready to look at the assignment.">
       <created>1637343587258</created>
@@ -106,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637343587258</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Take in the json example">
+      <created>1637350378059</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1637350378059</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,18 +134,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Roll up a hello world application with Mocha ready to look at the assignment." />
-    <option name="LAST_COMMIT_MESSAGE" value="Roll up a hello world application with Mocha ready to look at the assignment." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/test/json.spec.js</url>
-          <line>23</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Take in the json example" />
+    <MESSAGE value="Prettier &amp; EsLint" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prettier &amp; EsLint" />
   </component>
 </project>

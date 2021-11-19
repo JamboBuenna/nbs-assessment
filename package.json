@@ -7,6 +7,11 @@
     "start": "nodemon ./src/app.js",
     "test": "NODE_ENV=test NODE_NO_WARNINGS=1 mocha"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -20,5 +25,15 @@
     "nodemon": "^2.0.15",
     "save-dev": "^0.0.1-security",
     "supertest": "^6.1.6"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.1",
+    "husky": "^7.0.4",
+    "prettier": "2.4.1",
+    "pretty-quick": "^3.1.2"
   }
 }
