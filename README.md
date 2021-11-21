@@ -1,13 +1,7 @@
 # nbs-assessment
-NBS - Project Manager Assessment Exercise
 
+Project Manager Assessment Exercise for James Nurse
 
-* Check if prettier & EsLint work on commit & if so fix hooks
-* Assert which piece of logic for sorting the objects I should keep
-* Document code
-* Create a readme
-
-# TextClassification
 ---
 
 ## Goal:
