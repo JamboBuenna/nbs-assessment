@@ -39,7 +39,6 @@ run `npm install`
 * To run a webserver where you can test using postman `npm run start`
 * Instantiates up an instance of the webserver, runs the mocha tests & tears webserver down. `run run test`
 
-
 ---
 # Choices
 
@@ -49,26 +48,25 @@ I used NodeJS as my server for swiftness of building, it is relatively quick to 
 ---
 # Tools
 
+## Swagger docs
+Swagger documentation can be found at /api-docs
+
 ---
 # Improvements
 
 
-## server
+## Server
 
 * Add DTO file & models
   * Having an in & out model will allow me to put validation on the route
-* Remove service code from the router
-* Optimise logic 
-* Dockerise the app
-  * If I was making this production ready I would remove tools such as nodemon which is a development tool rather than a production tool
+* Remove service code from the router, as router should be simpler
+* Production ready the app
+  * If I was making this production ready I would remove tools such as nodemon which is a development tool rather than a production tool & dockerise it.
 
 ## CI/CD
 
 * Use IAC to spool up an environment
 * Implement a CI/CD scripts.
-
-## Swagger docs
-Swagger documentation can be found at /docs
 
 ## Testing
 

@@ -4,13 +4,8 @@ const express = require('express');
 const router = express.Router();
 
 /**
- *
- * @openapi
- *
- * /health:
- *   get:
- *     summary: Simple health check
- *     description: This is a hello world endpoint
+ * Simple health check
+ * @route GET /health
  */
 router.get('/', (req, res, next) => {
   res.send('REST service working normally');

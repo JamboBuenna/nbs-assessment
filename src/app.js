@@ -6,6 +6,7 @@ const swaggerUi = require('swagger-ui-express')
 const swaggerJsdoc = require('swagger-jsdoc')
 
 const app = express()
+const expressSwagger = require('express-swagger-generator')(app);
 
 /*
   If the primary use case of this service is to handle large JSON dumps, I'd set a larger limit like this,
@@ -53,18 +54,42 @@ const swaggerDefinition = {
   ]
 }
 
-const options = {
-  swaggerDefinition,
-  // Paths to files containing OpenAPI definitions
-  apis: ['./routes/*.js']
-}
+// const options = {
+//   swaggerDefinition,
+//   // Paths to files containing OpenAPI definitions
+//   apis: ['./routes/*.js']
+// }
 
-const swaggerSpec = swaggerJsdoc(options)
-app.use(
-  '/docs',
-  swaggerUi.serve,
-  swaggerUi.setup(swaggerSpec)
-)
+// const swaggerSpec = swaggerJsdoc(options)
+// app.use(
+//   '/docs',
+//   swaggerUi.serve,
+//   swaggerUi.setup(swaggerSpec)
+// )
+
+/**
+ * Swagger
+ */
+let options = {
+  swaggerDefinition: {
+    info: {
+      description: 'An assessment for James Nurse for the Software Development Manager Role',
+      title: 'NBS Assessment',
+      version: '1.0.0',
+    },
+    host: `localhost:3000`,
+    basePath: '',
+    produces: [
+      "application/json",
+      "application/xml"
+    ],
+  },
+  basedir: __dirname, //app absolute path
+  files: ['./routes/**/*.js'] //Path to the API handle folder
+};
+
+expressSwagger(options)
+
 
 app.listen(PORT, () => {
   console.info(`App listening on port ${PORT}`)
