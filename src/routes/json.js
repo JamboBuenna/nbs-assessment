@@ -1,35 +1,43 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
-router.post('/', (req, res, next) => {
+router.post("/", (req, res, next) => {
   const inputArray = req.body;
 
-  const reorderedJSONArray = inputArray.map(function(obj){
-    return stringifySort(obj)
+  const reorderedJSONArray = inputArray.map(function(obj) {
+    return stringifySort(obj);
   });
 
+  // This set isn't really needed, as the logic below delivers a processing, slightly less efficiently as doesn't
+  // use HashMaps. However if the requirements were simplified as repeated items weren't used I'd suggest using this
+  // due to simpler to read code.
   const uniqueArray = Array.from(new Set(reorderedJSONArray));
-  const inputLength = inputArray.length;
-  const uniqueLength = uniqueArray.length
+
+  // By searching only forward of the item, it's a little more efficient
+  const repeatedItems = reorderedJSONArray.filter((item,i) => reorderedJSONArray.includes(item, i+1))
+
 
   const response = {
-    inputLength,
-    uniqueLength,
-    repeatedItems: inputLength - uniqueLength
-  }
+    inputLength: inputArray.length,
+    uniqueLength: uniqueArray.length,
+    repeated: {
+      items: repeatedItems,
+      length: repeatedItems.length
+    }
+  };
 
   res.send(response);
 });
 
 /**
- * An implementation of sort that can handle arrays &
- * //TODO - Work out what's going on here.
+ * An implementation of making the objects consistent that can handle arrays.
+ * TODO - Probably overkill, was interesting to play with, remove this.
  * @param unordered The unordered JSON object
  * @param sortArrays: boolean Whether or not to reorder arrays
  * @returns {{}|*}
  */
 function deepSortObject(unordered, sortArrays = false) {
-  if (!unordered || typeof unordered !== 'object') {
+  if (!unordered || typeof unordered !== "object") {
     return unordered;
   }
 
