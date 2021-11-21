@@ -1,6 +1,9 @@
 require('dotenv').config();
 const express = require('express');
 const logger = require('morgan');
+const router = require('express').Router();
+const swaggerUi = require('swagger-ui-express');
+swaggerJsdoc = require("swagger-jsdoc");
 
 const app = express();
 
@@ -24,6 +27,44 @@ app.use('/health', healthRouter);
 
 const jsonRouter = require('./routes/json');
 app.use('/json', jsonRouter);
+
+router.use('/api-docs', swaggerUi.serve);
+const swaggerDefinition ={
+    openapi: "3.0.0",
+    info: {
+      title: "nbs-assessment",
+      version: "0.1.0",
+      description:
+        "NBS - Project Manager Assessment Exercise",
+      license: {
+        name: "MIT",
+        url: "https://spdx.org/licenses/MIT.html",
+      },
+      contact: {
+        name: "James Nurse",
+        email: "jamesnurse1987@gmail.com",
+      },
+    },
+    servers: [
+      {
+        url: 'http://localhost:3000',
+        description: 'Development server',
+      },
+    ]
+};
+
+const options = {
+  swaggerDefinition,
+  // Paths to files containing OpenAPI definitions
+  apis: ['./routes/*.js'],
+};
+
+const swaggerSpec = swaggerJsdoc(options);
+app.use(
+  "/docs",
+  swaggerUi.serve,
+  swaggerUi.setup(swaggerSpec)
+);
 
 app.listen(PORT, () => {
   console.info(`App listening on port ${PORT}`);

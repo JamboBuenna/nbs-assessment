@@ -1,6 +1,13 @@
 const express = require("express");
 const router = express.Router();
 
+/**
+ * @swagger
+ * /json:
+ *   post:
+ *     summary: Identifies duplicates in an array of JSON objects.
+ *     description: Identifies duplicates in an array of JSON objects, to flesh out.
+ */
 router.post("/", (req, res, next) => {
   const inputArray = req.body;
 

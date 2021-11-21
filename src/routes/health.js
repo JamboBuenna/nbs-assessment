@@ -1,9 +1,16 @@
-// /routes/posts.js
+// /routes/health.js
+
 const express = require('express');
 const router = express.Router();
 
-
-var a = "b" // this will yield eslint error
+/**
+ * @openapi
+ * @swagger
+ * /health:
+ *   get:
+ *     summary: Simple health check
+ *     description: This is a hello world endpoint
+ */
 router.get('/', (req, res, next) => {
   res.send('REST service working normally');
 });
