@@ -37,21 +37,17 @@ run `npm install`
 ## Usage
 
 * To run a webserver where you can test using postman `npm run start`
-* Instanciates up an instance of the webserver, runs the mocha tests & tears webserver down. `run run test`
+* Instantiates up an instance of the webserver, runs the mocha tests & tears webserver down. `run run test`
 
 
 ---
 # Choices
 
 ## NodeJS / Express
-I used NodeJS as my server for swiftness of building, it is relatively quick to set up from scratch. I've normally used Express with a framework, such as Sails due to the amount of best practices it enforces out the box, however decided to use the minimal framework to show I can set up &  structure code in an understandable way without as many helper functions. Node also has one of the quickest boot up times, & is nice to use in serverless applications as the minimal framework with express required to get a REST API up means it's lightweight and fast.
+I used NodeJS as my server for swiftness of building, it is relatively quick to set up from scratch. I've normally used Express with a framework, such as Sails due to the amount of best practices it enforces out the box, however decided to use the minimal framework to show I can set up &  structure code in an understandable way without as many helper functions. Node also has one of the quickest boot-up times, & is nice to use in serverless applications as the minimal framework with express required to get a REST API up means it's lightweight and fast.
 
 ---
 # Tools
-
-## Swagger docs
-Swagger documentation can be found at /api-docs
-
 
 ---
 # Improvements
@@ -71,7 +67,9 @@ Swagger documentation can be found at /api-docs
 * Use IAC to spool up an environment
 * Implement a CI/CD scripts.
 
+## Swagger docs
+Swagger documentation can be found at /docs
 
 ## Testing
 
-* I used this opportunity to learn a little bit about the Mocha framework, I think that there are a number 
+* I used this opportunity to learn a bit about the Mocha framework, I think that there are a number of places where I could implement things significantly better. I plan to go back & look at this on a weekend where I have more than a few hours spare.

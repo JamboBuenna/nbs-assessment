@@ -1,73 +1,73 @@
-require('dotenv').config();
-const express = require('express');
-const logger = require('morgan');
-const router = require('express').Router();
-const swaggerUi = require('swagger-ui-express');
-swaggerJsdoc = require("swagger-jsdoc");
+require('dotenv').config()
+const express = require('express')
+const logger = require('morgan')
+const router = require('express').Router()
+const swaggerUi = require('swagger-ui-express')
+const swaggerJsdoc = require('swagger-jsdoc')
 
-const app = express();
+const app = express()
 
 /*
   If the primary use case of this service is to handle large JSON dumps, I'd set a larger limit like this,
   but every service still should have a reasonable / fair use cap. If the service wanted to handle larger JSON
   inputs, I'd refactor the code / service accordingly.
  */
-app.use(express.json({ limit: '25mb' }));
-app.use(express.urlencoded({ limit: '25mb', extended: true }));
+app.use(express.json({ limit: '25mb' }))
+app.use(express.urlencoded({ limit: '25mb', extended: true }))
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT
 
-app.use(logger('dev'));
+app.use(logger('dev'))
 
-app.use(express.json()); //http://expressjs.com/en/api.html#express.json
-app.use(express.urlencoded({ extended: false })); //http://expressjs.com/en/5x/api.html#express.urlencoded
+app.use(express.json()) // http://expressjs.com/en/api.html#express.json
+app.use(express.urlencoded({ extended: false })) // http://expressjs.com/en/5x/api.html#express.urlencoded
 
-const healthRouter = require('./routes/health');
-app.use('/health', healthRouter);
+const healthRouter = require('./routes/health')
+app.use('/health', healthRouter)
 
-const jsonRouter = require('./routes/json');
-app.use('/json', jsonRouter);
+const jsonRouter = require('./routes/json')
+app.use('/json', jsonRouter)
 
-router.use('/api-docs', swaggerUi.serve);
-const swaggerDefinition ={
-    openapi: "3.0.0",
-    info: {
-      title: "nbs-assessment",
-      version: "0.1.0",
-      description:
-        "NBS - Project Manager Assessment Exercise",
-      license: {
-        name: "MIT",
-        url: "https://spdx.org/licenses/MIT.html",
-      },
-      contact: {
-        name: "James Nurse",
-        email: "jamesnurse1987@gmail.com",
-      },
+router.use('/api-docs', swaggerUi.serve)
+const swaggerDefinition = {
+  openapi: '3.0.0',
+  info: {
+    title: 'nbs-assessment',
+    version: '0.1.0',
+    description:
+        'NBS - Project Manager Assessment Exercise',
+    license: {
+      name: 'MIT',
+      url: 'https://spdx.org/licenses/MIT.html'
     },
-    servers: [
-      {
-        url: 'http://localhost:3000',
-        description: 'Development server',
-      },
-    ]
-};
+    contact: {
+      name: 'James Nurse',
+      email: 'jamesnurse1987@gmail.com'
+    }
+  },
+  servers: [
+    {
+      url: 'http://localhost:3000',
+      description: 'Development server'
+    }
+  ]
+}
 
 const options = {
   swaggerDefinition,
   // Paths to files containing OpenAPI definitions
-  apis: ['./routes/*.js'],
-};
+  apis: ['./routes/*.js']
+}
 
-const swaggerSpec = swaggerJsdoc(options);
+const swaggerSpec = swaggerJsdoc(options)
 app.use(
-  "/docs",
+  '/docs',
   swaggerUi.serve,
   swaggerUi.setup(swaggerSpec)
-);
+)
 
 app.listen(PORT, () => {
-  console.info(`App listening on port ${PORT}`);
-});
+  console.info(`App listening on port ${PORT}`)
+})
 
-module.exports = app;
+module.exports = app

@@ -4,8 +4,9 @@ const express = require('express');
 const router = express.Router();
 
 /**
+ *
  * @openapi
- * @swagger
+ *
  * /health:
  *   get:
  *     summary: Simple health check

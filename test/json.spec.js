@@ -8,6 +8,7 @@ const fs = require('fs')
  * TODO - This got a little over complex when added in assertions about the repeated items so may want a refactor
  * @param inputArray
  * @param expectedResponse
+ * @param checkRepeatedItems
  * @returns {Promise<boolean>} Whether or not the assessment has passed or failed (I'm sure that Mocha must have
  * a better method of doing helper functions, so if developed further that should be looked into)
  */
@@ -15,7 +16,7 @@ async function assertionHelper(inputArray, expectedResponse, checkRepeatedItems 
   return await request(app)
     .post('/json')
     .send(inputArray).then((response) => {
-      if(response.statusCode == 200) {
+      if(response.statusCode === 200) {
         const responseObject = JSON.parse(response.text);
 
         if(
@@ -28,7 +29,7 @@ async function assertionHelper(inputArray, expectedResponse, checkRepeatedItems 
             return true;
           }
 
-          if(responseObject.repeated.items.toString()  == expectedResponse.repeated.items) {
+          if(responseObject.repeated.items.toString()  === expectedResponse.repeated.items) {
             return true;
           }
         }
